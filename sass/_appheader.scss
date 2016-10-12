@@ -1,0 +1,148 @@
+#app-header {
+    width: 100%;
+    background-color: $card-bg-color;
+    @extend .apply-shadow;
+    @extend .flex-container;
+   
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-section {
+        height: 100px;
+    }
+
+    #left-section, #right-section {
+        flex: 1;
+        margin: 0 10px;
+        background-color: $card-bg-color;
+        @extend .flex-container;
+            & > div {
+                @extend .flex-container;
+            }
+    }
+
+    #center-section {
+        flex: 0 0 100px;
+        position: relative;
+    }
+}
+
+#left-section {
+     #extreme-left-section {
+         width: 100px;
+         align-items: center;
+         justify-content: center;
+         border-right: 1px solid $subdued-color;
+
+         #extreme-left-link {
+             @extend .circular-icons;
+             background-color: $app-blue;
+             color: $card-bg-color;
+             text-align: center;
+             @extend .smooth-animation;
+
+                &:hover {
+                    color: $app-blue;
+                    background-color: $card-bg-color;
+                    border-color: $app-blue;
+                }
+         }
+     }
+
+     #left-icon-list {
+         list-style-type: none;
+         margin-left: 10px;
+         @extend .flex-container;
+
+         .left-icon-item {
+             flex: 1;
+             width: 80px;
+             height: 100%;
+             border-bottom: 1px solid $card-bg-color;
+             @extend .smooth-animation;
+
+             &.active, &:hover {
+                 border-color: $app-blue;
+             }
+
+             .circular-icons {
+                 text-align: center;
+                 color: $strong-color;
+                 margin: auto;
+                 top: 50%;
+                 transform: translateY(-50%);
+             }       
+         }
+     }
+}
+
+#right-section {
+    flex-flow: row-reverse;
+
+    #profile-dp {
+        width: 100px;
+        height: 100%;
+
+        #profile-link {
+            width: 60%;
+            height: 60%;
+            display: block;
+            margin: auto;
+            border-radius: 50%;
+            background: url('../images/profile-dp.jpg');
+            background-size: contain;
+        }
+    }
+
+    #search-box {
+        flex: 1;
+        flex-flow: row-reverse;
+        height: 100%;
+        position: relative;
+
+        #search-query {
+            @extend .circular-icons;
+            margin: auto 0;
+            margin-left: 20px;
+            padding: 0 20px;
+            font-family: $font;
+            font-weight: $light;
+            color: $primary-color;
+            font-size: 1em;
+            @extend .smooth-animation;
+            background-color: $card-bg-color;
+
+            &:focus {
+                outline: none;
+                border-color: $primary-color;
+                width: 100%;
+                min-width: 200px;
+                background-color: #fffcf8;
+            }
+
+            &:hover {
+                border-color: $primary-color;
+            }
+        }
+
+        #search-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 22px;
+            color: $primary-color;
+        }
+
+    }
+}
+
+#home-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $app-blue;
+}

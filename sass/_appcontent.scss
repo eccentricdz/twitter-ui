@@ -1,0 +1,45 @@
+#content-container {
+    width: 90%;
+    max-width: 700px;
+    background-color: $card-bg-color;
+    margin: 50px auto;
+    height: 500px;
+
+    #content-division {
+        width: 100%;
+        @extend .flex-container;
+        align-items: center;
+        justify-content: center;
+        @extend .apply-shadow;
+
+        & > div {
+            @extend .flex-container;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+            flex: 1 1 25%;
+            height: 100px;
+            text-align: center;
+            font-family: $font;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-bottom: 4px solid $card-bg-color;
+            @extend .smooth-animation;
+
+            .division-name{
+                font-weight: $light;
+                color: $subdued-color;
+                font-size: 0.9em;
+            }
+
+            .division-count {
+                font-weight: $bold;
+                color: $strong-color;
+            }
+
+            &.active, &:hover{
+                border-color: $app-blue;
+            }
+        }
+    }
+}
