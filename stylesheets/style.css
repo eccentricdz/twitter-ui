@@ -6,28 +6,75 @@
 body {
   background-color: #f2eee8; }
 
-.flex-container, #app-header, #app-header #left-section, #app-header #right-section, #right-section > div {
+.flex-container, #app-header, #app-header #left-section, #app-header #right-section, #app-header #left-section > div, #app-header #right-section > div, #left-section #left-icon-list {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
 
+.circular-icons, #left-section #extreme-left-section #extreme-left-link, #right-section #search-box #search-query {
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  display: block;
+  border: 1px solid #e5e5e5;
+  position: relative; }
+  .circular-icons .fa, #left-section #extreme-left-section #extreme-left-link .fa, #right-section #search-box #search-query .fa {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+
+#app-container {
+  min-width: 500px; }
+
 #app-header {
   width: 100%;
-  height: 100px;
   background-color: #fffbf5;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between; }
   #app-header .header-section {
-    height: 100%; }
+    height: 100px; }
   #app-header #left-section, #app-header #right-section {
     flex: 1;
-    margin: 0 10px; }
+    margin: 0 10px;
+    background-color: #fffbf5; }
   #app-header #center-section {
     flex: 0 0 100px;
     position: relative; }
+
+#left-section #extreme-left-section {
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #e5e5e5; }
+  #left-section #extreme-left-section #extreme-left-link {
+    background-color: #80a8cc;
+    color: #fffbf5;
+    text-align: center;
+    transition: all 0.3s; }
+    #left-section #extreme-left-section #extreme-left-link:hover {
+      color: #80a8cc;
+      background-color: #fffbf5;
+      border-color: #80a8cc; }
+#left-section #left-icon-list {
+  list-style-type: none;
+  margin-left: 10px; }
+  #left-section #left-icon-list .left-icon-item {
+    flex: 1;
+    width: 80px;
+    height: 100%;
+    border-bottom: 1px solid #fffbf5;
+    transition: all 0.3s; }
+    #left-section #left-icon-list .left-icon-item.active, #left-section #left-icon-list .left-icon-item:hover {
+      border-color: #80a8cc; }
+    #left-section #left-icon-list .left-icon-item .circular-icons, #left-section #left-icon-list .left-icon-item #extreme-left-section #extreme-left-link, #left-section #extreme-left-section #left-icon-list .left-icon-item #extreme-left-link, #left-section #left-icon-list .left-icon-item #right-section #search-box #search-query, #right-section #search-box #left-section #left-icon-list .left-icon-item #search-query {
+      text-align: center;
+      color: #605e58;
+      margin: auto;
+      top: 50%;
+      transform: translateY(-50%); }
 
 #right-section {
   flex-flow: row-reverse; }
@@ -37,7 +84,6 @@ body {
     #right-section #profile-dp #profile-link {
       width: 60%;
       height: 60%;
-      background-color: red;
       display: block;
       margin: auto;
       border-radius: 50%;
@@ -49,25 +95,28 @@ body {
     height: 100%;
     position: relative; }
     #right-section #search-box #search-query {
-      height: 50px;
       margin: auto 0;
-      width: 50%;
-      border-radius: 50px;
-      border: 1px solid #e5e5e5;
+      margin-left: 20px;
       padding: 0 20px;
       font-family: Roboto, sans-serif;
       font-weight: 300;
       color: #939291;
       font-size: 1em;
-      transition: all 0.5s; }
+      transition: all 0.3s;
+      background-color: #fffbf5; }
       #right-section #search-box #search-query:focus {
         outline: none;
+        border-color: #939291;
+        width: 100%;
+        min-width: 200px;
+        background-color: #fffcf8; }
+      #right-section #search-box #search-query:hover {
         border-color: #939291; }
     #right-section #search-box #search-icon {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: 20px;
+      right: 22px;
       color: #939291; }
 
 #home-link {
@@ -85,5 +134,12 @@ body {
   background-color: #fffbf5;
   margin: 50px auto;
   height: 500px; }
+
+@media (max-width: 750px) {
+  #app-header #right-section {
+    flex-basis: 100%; }
+    #app-header #right-section #search-query {
+      width: 100%;
+      background-color: #fffcf8; } }
 
 /*# sourceMappingURL=style.css.map */

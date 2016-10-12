@@ -8,17 +8,45 @@
     <body>
         <div id="app-container">
             <header id="app-header">
-                <section class="header-section" id="left-section"></section>
+                <section class="header-section" id="left-section">
+                    <div id="extreme-left-section">
+                        <a id="extreme-left-link" href="https://github.com/eccentricdz/twitter-ui">
+                            <i class="fa fa-github fa-2x" id="extreme-left-icon"></i>
+                        </a>
+                    </div>
+                    <ul id="left-icon-list">
+                        <li class="left-icon-item" id="heart">
+                            <a class="circular-icons" href="#">
+                                <i class="fa fa-heart"></i>
+                            </a>                      
+                        </li>
+                        <li class="left-icon-item" id="mail">
+                            <a class="circular-icons" href="#">
+                                <i class="fa fa-envelope"></i>
+                            </a>                      
+                        </li>
+                        <li class="left-icon-item active" id="hashtag">
+                            <a class="circular-icons" href="#">
+                                <i class="fa fa-hashtag"></i>
+                            </a>                      
+                        </li>
+                    </ul>
+                </section>
+
                 <section class="header-section" id="center-section">
                     <a href="index.html" id="home-link"><i class="fa fa-twitter fa-3x"></i></a>
                 </section>
+
                 <section class="header-section" id="right-section">
                     <div id="profile-dp">
                         <a id="profile-link" href="#"></a>
                     </div>
+
                     <div id="search-box">
-                        <input type="text" name="search-query" id="search-query" placeholder="Search"/>
-                        <span id="search-icon"><i class="fa fa-search"></i></span>
+                        <input type="text" name="search-query" id="search-query"/>
+                        <label for="search-query">
+                            <span id="search-icon"><i class="fa fa-search"></i></span>
+                        </label>
                     </div>
                 </section>
             </header>

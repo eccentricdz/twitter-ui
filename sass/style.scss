@@ -18,9 +18,27 @@ body {
     display: flex;
 }
 
+.circular-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    display: block;
+    border: 1px solid $subdued-color;
+    position: relative;
+
+    .fa {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+#app-container {
+    min-width: 500px;
+}
+
 #app-header {
     width: 100%;
-    height: 100px;
     background-color: $card-bg-color;
 
     @extend .flex-container;
@@ -30,13 +48,17 @@ body {
     justify-content: space-between;
 
     .header-section {
-        height: 100%;
+        height: 100px;
     }
 
     #left-section, #right-section {
         flex: 1;
         margin: 0 10px;
+        background-color: $card-bg-color;
         @extend .flex-container;
+            & > div {
+                @extend .flex-container;
+            }
     }
 
     #center-section {
@@ -45,13 +67,57 @@ body {
     }
 }
 
+#left-section {
+     #extreme-left-section {
+         width: 100px;
+         align-items: center;
+         justify-content: center;
+         border-right: 1px solid $subdued-color;
+
+         #extreme-left-link {
+             @extend .circular-icons;
+             background-color: $app-blue;
+             color: $card-bg-color;
+             text-align: center;
+             transition: all 0.3s;
+
+                &:hover {
+                    color: $app-blue;
+                    background-color: $card-bg-color;
+                    border-color: $app-blue;
+                }
+         }
+     }
+
+     #left-icon-list {
+         list-style-type: none;
+         margin-left: 10px;
+         @extend .flex-container;
+
+         .left-icon-item {
+             flex: 1;
+             width: 80px;
+             height: 100%;
+             border-bottom: 1px solid $card-bg-color;
+             transition: all 0.3s;
+
+             &.active, &:hover {
+                 border-color: $app-blue;
+             }
+
+             .circular-icons {
+                 text-align: center;
+                 color: $strong-color;
+                 margin: auto;
+                 top: 50%;
+                 transform: translateY(-50%);
+             }       
+         }
+     }
+}
+
 #right-section {
-
     flex-flow: row-reverse;
-
-    & > div {
-        @extend .flex-container;
-    }
 
     #profile-dp {
         width: 100px;
@@ -60,7 +126,6 @@ body {
         #profile-link {
             width: 60%;
             height: 60%;
-            background-color: red;
             display: block;
             margin: auto;
             border-radius: 50%;
@@ -76,20 +141,26 @@ body {
         position: relative;
 
         #search-query {
-            height: 50px;
+            @extend .circular-icons;
             margin: auto 0;
-            width: 50%;
-            border-radius: 50px;
-            border: 1px solid $subdued-color;
+            margin-left: 20px;
             padding: 0 20px;
             font-family: $font;
             font-weight: $light;
             color: $primary-color;
             font-size: 1em;
-            transition: all 0.5s;
+            transition: all 0.3s;
+            background-color: $card-bg-color;
 
             &:focus {
                 outline: none;
+                border-color: $primary-color;
+                width: 100%;
+                min-width: 200px;
+                background-color: #fffcf8;
+            }
+
+            &:hover {
                 border-color: $primary-color;
             }
         }
@@ -98,7 +169,7 @@ body {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 20px;
+            right: 22px;
             color: $primary-color;
         }
 
@@ -121,4 +192,16 @@ body {
     background-color: $card-bg-color;
     margin: 50px auto;
     height: 500px;
+}
+
+@media (max-width: 750px) {
+    #app-header {
+        #right-section {
+            flex-basis: 100%;
+            #search-query {
+                width: 100%;
+                background-color: #fffcf8;
+            }
+        }
+    }
 }
