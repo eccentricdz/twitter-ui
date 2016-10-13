@@ -1,0 +1,24 @@
+[
+    {
+        "tweet_id" : "1",
+        "user_name" : "Rahul Agarwal",
+        "user_handle" : "@edz",
+        "profile_pic_url" : "images/profile-dp.jpg",
+        "tweet_since" : "2m",
+        "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "image_url" : "",
+        "retweeted" : "false",
+        "retweet_count" : "20"
+    },
+    {
+        "tweet_id" : "2",
+        "user_name" : "Bunty Yadav",
+        "user_handle" : "@bunty",
+        "profile_pic_url" : "images/profile-dp.jpg",
+        "tweet_since" : "1h",
+        "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "image_url" : "",
+        "retweeted" : "false",
+        "retweet_count" : "0"
+    }
+]

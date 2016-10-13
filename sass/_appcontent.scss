@@ -53,6 +53,7 @@
             @extend .flex-container;
             padding: 30px;
             align-items: stretch;
+            border-bottom: 1px solid $subdued-color;
 
             & > section {
                 display: flex;
@@ -74,7 +75,7 @@
 
 .user-dp{
     @extend .circular-icons;
-    background: url('../images/profile-dp.jpg');
+    background-image: url('../images/profile-dp.jpg');
     background-size: contain;
 }
 
@@ -139,6 +140,8 @@
             }
         }
     }
+}
 
-
+#sample-card{
+    display: none !important;
 }
