@@ -5,7 +5,6 @@
 
     .content-section{
         width: 100%;
-        background-color: $card-bg-color;
         @extend .flex-container;
         @extend .apply-shadow;
     }
@@ -13,6 +12,7 @@
     #content-division {
         align-items: center;
         justify-content: center;
+        background-color: $card-bg-color;
 
         & > div {
             @extend .flex-container;
@@ -54,6 +54,8 @@
             padding: 30px;
             align-items: stretch;
             border-bottom: 1px solid $subdued-color;
+            background-color: $card-bg-color;
+            animation: slide-in 1s 1;
 
             & > section {
                 display: flex;
@@ -144,4 +146,15 @@
 
 #sample-card{
     display: none !important;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

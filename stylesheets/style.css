@@ -100,11 +100,11 @@
   max-width: 700px;
   margin: 50px auto; }
   #content-container .content-section {
-    width: 100%;
-    background-color: #fffbf5; }
+    width: 100%; }
   #content-container #content-division {
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    background-color: #fffbf5; }
     #content-container #content-division > div {
       align-items: center;
       justify-content: center;
@@ -131,7 +131,9 @@
     #content-container #articles-container .tweet {
       padding: 30px;
       align-items: stretch;
-      border-bottom: 1px solid #d6d6d6; }
+      border-bottom: 1px solid #d6d6d6;
+      background-color: #fffbf5;
+      animation: slide-in 1s 1; }
       #content-container #articles-container .tweet > section {
         display: flex; }
       #content-container #articles-container .tweet .user-dp-column {
@@ -184,6 +186,13 @@
 #sample-card {
   display: none !important; }
 
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 * {
   box-sizing: border-box;
   margin: 0;
