@@ -20,6 +20,14 @@ require(['json!tweets.json'], function(tweet_results){
             $newCard.find('.tweet-text').text(tweet.text);
             //set the user profile pic
             $newCard.find('.user-dp').css('background-image', 'url("'+tweet.profile_pic_url+'")');
+            //set the retweet count
+            if (tweet.retweet_count > 0) {
+                $newCard.find('.retweet-count').text(tweet.retweet_count);
+            }
+            //set the retweeted icon
+            if (tweet.retweeted == "false") {
+                $newCard.find('.retweeted-icon').hide();
+            }
 
             //append the card to the articles container and change the sample card id
             $newCard.appendTo($articlesContainer).attr('id', 'tweet-card-'+tweet.tweet_id);

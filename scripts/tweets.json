@@ -12,13 +12,13 @@
     },
     {
         "tweet_id" : "2",
-        "user_name" : "Bunty Yadav",
-        "user_handle" : "@bunty",
-        "profile_pic_url" : "images/profile-dp.jpg",
+        "user_name" : "Nitish Singh",
+        "user_handle" : "@nsingh",
+        "profile_pic_url" : "images/profile-dp-3.png",
         "tweet_since" : "1h",
         "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
         "image_url" : "",
-        "retweeted" : "false",
+        "retweeted" : "true",
         "retweet_count" : "0"
     }
 ]
