@@ -119,6 +119,21 @@
     .tweet-content{
         color: $primary-color;
         margin-top: 10px;
+        flex-flow: column;
+
+        .tweet-pic{
+            @extend .flex-container;
+            @extend .apply-shadow;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border: 5px solid #fffcf8;
+            margin-top: 10px;
+
+            img{
+                width: inherit;
+            }
+        }
     }
 
     .tweet-controls{

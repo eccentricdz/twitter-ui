@@ -170,7 +170,16 @@
     color: #acd373; }
   .content-column .tweet-content {
     color: #9e9d9c;
-    margin-top: 10px; }
+    margin-top: 10px;
+    flex-flow: column; }
+    .content-column .tweet-content .tweet-pic {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      border: 5px solid #fffcf8;
+      margin-top: 10px; }
+      .content-column .tweet-content .tweet-pic img {
+        width: inherit; }
   .content-column .tweet-controls {
     margin-top: 15px; }
     .content-column .tweet-controls i {
@@ -208,7 +217,7 @@
 body {
   background-color: #f2eee8; }
 
-.flex-container, #app-header, #app-header #left-section, #app-header #right-section, #app-header #left-section > div, #app-header #right-section > div, #left-section #left-icon-list, #content-container .content-section, #content-container #content-division > div, #content-container #articles-container .tweet, .content-column > div, .content-column .tweet-controls .left-control-stack {
+.flex-container, #app-header, #app-header #left-section, #app-header #right-section, #app-header #left-section > div, #app-header #right-section > div, #left-section #left-icon-list, #content-container .content-section, #content-container #content-division > div, #content-container #articles-container .tweet, .content-column > div, .content-column .tweet-content .tweet-pic, .content-column .tweet-controls .left-control-stack {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -227,7 +236,7 @@ body {
     top: 50%;
     transform: translateY(-50%); }
 
-.apply-shadow, #app-header, #content-container .content-section {
+.apply-shadow, #app-header, #content-container .content-section, .content-column .tweet-content .tweet-pic {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
 
 .smooth-animation, #left-section #extreme-left-section #extreme-left-link, #left-section #left-icon-list .left-icon-item, #right-section #search-box #search-query, #content-container #content-division > div, .content-column .tweet-controls i {

@@ -18,6 +18,14 @@ require(['json!tweets.json'], function(tweet_results){
             $newCard.find('.tweet-time').text(tweet.tweet_since);
             //set the tweet text
             $newCard.find('.tweet-text').text(tweet.text);
+            //set the tweet image
+            var $tweetImage = $newCard.find('.tweet-image');
+            if (tweet.image_url != "") {
+                $tweetImage.attr('src', tweet.image_url);
+            }
+            else {
+                $tweetImage.parent().hide();
+            }
             //set the user profile pic
             $newCard.find('.user-dp').css('background-image', 'url("'+tweet.profile_pic_url+'")');
             //set the retweet count

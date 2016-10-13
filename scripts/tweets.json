@@ -20,5 +20,16 @@
         "image_url" : "",
         "retweeted" : "true",
         "retweet_count" : "0"
+    },
+    {
+        "tweet_id" : "3",
+        "user_name" : "Rahul Agarwal",
+        "user_handle" : "@edz",
+        "profile_pic_url" : "images/profile-dp.jpg",
+        "tweet_since" : "2w",
+        "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+        "image_url" : "images/pic-tweet.jpg",
+        "retweeted" : "false",
+        "retweet_count" : "39"
     }
 ]
