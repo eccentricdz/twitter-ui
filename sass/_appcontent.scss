@@ -1,16 +1,18 @@
 #content-container {
     width: 90%;
     max-width: 700px;
-    background-color: $card-bg-color;
     margin: 50px auto;
-    height: 500px;
+
+    .content-section{
+        width: 100%;
+        background-color: $card-bg-color;
+        @extend .flex-container;
+        @extend .apply-shadow;
+    }
 
     #content-division {
-        width: 100%;
-        @extend .flex-container;
         align-items: center;
         justify-content: center;
-        @extend .apply-shadow;
 
         & > div {
             @extend .flex-container;
@@ -42,4 +44,101 @@
             }
         }
     }
+
+    #articles-container{
+        margin-top: 50px;
+        flex-flow: column;
+
+        .tweet{
+            @extend .flex-container;
+            padding: 30px;
+            align-items: stretch;
+
+            & > section {
+                display: flex;
+            }
+
+            .user-dp-column{
+                flex: 0 1 75px;
+                justify-content: flex-end;
+                padding: 0 15px 0 0;
+            }
+
+            .content-column{
+                flex: 1 1;
+                flex-flow: column;
+            }
+        } 
+    }
+}
+
+.user-dp{
+    @extend .circular-icons;
+    background: url('../images/profile-dp.jpg');
+    background-size: contain;
+}
+
+.content-column{
+    font-family: $font;
+    font-size: 0.9em;
+    padding-left: 6px;
+    & > div{
+        @extend .flex-container;
+    }
+
+    .user-info{
+
+        .tweet-time{
+            flex: 1 1;
+            text-align: right;
+            color: $subdued-color;
+            font-weight: $light;
+        }
+
+        .user-name{
+            flex: 3 1;
+            color: $strong-color;
+            font-weight: $bold;
+
+            .user-handle{
+                color: $subdued-color;
+                font-weight: $light;
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .tweet-content{
+        color: $primary-color;
+        margin-top: 10px;
+    }
+
+    .tweet-controls{
+        margin-top: 15px;
+
+         i{
+             cursor: pointer;
+             color: $subdued-color;
+             @extend .smooth-animation;
+             &:hover{
+                 color: $primary-color;
+             }
+         }
+
+        .right-expander-icon{
+            flex: 1 1;
+            text-align: right;
+
+        }
+        .left-control-stack{
+            @extend .flex-container;
+            flex: 5 1;
+
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+
+
 }

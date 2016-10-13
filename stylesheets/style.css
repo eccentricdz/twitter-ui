@@ -18,7 +18,7 @@
   width: 100px;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid #e5e5e5; }
+  border-right: 1px solid #d6d6d6; }
   #left-section #extreme-left-section #extreme-left-link {
     background-color: #80a8cc;
     color: #fffbf5;
@@ -37,7 +37,7 @@
     border-bottom: 1px solid #fffbf5; }
     #left-section #left-icon-list .left-icon-item.active, #left-section #left-icon-list .left-icon-item:hover {
       border-color: #80a8cc; }
-    #left-section #left-icon-list .left-icon-item .circular-icons, #left-section #left-icon-list .left-icon-item #extreme-left-section #extreme-left-link, #left-section #extreme-left-section #left-icon-list .left-icon-item #extreme-left-link, #left-section #left-icon-list .left-icon-item #right-section #search-box #search-query, #right-section #search-box #left-section #left-icon-list .left-icon-item #search-query {
+    #left-section #left-icon-list .left-icon-item .circular-icons, #left-section #left-icon-list .left-icon-item #extreme-left-section #extreme-left-link, #left-section #extreme-left-section #left-icon-list .left-icon-item #extreme-left-link, #left-section #left-icon-list .left-icon-item #right-section #search-box #search-query, #right-section #search-box #left-section #left-icon-list .left-icon-item #search-query, #left-section #left-icon-list .left-icon-item .user-dp {
       text-align: center;
       color: #605e58;
       margin: auto;
@@ -68,23 +68,23 @@
       padding: 0 20px;
       font-family: Roboto, sans-serif;
       font-weight: 300;
-      color: #939291;
+      color: #9e9d9c;
       font-size: 1em;
       background-color: #fffbf5; }
       #right-section #search-box #search-query:focus {
         outline: none;
-        border-color: #939291;
+        border-color: #9e9d9c;
         width: 100%;
         min-width: 200px;
         background-color: #fffcf8; }
       #right-section #search-box #search-query:hover {
-        border-color: #939291; }
+        border-color: #9e9d9c; }
     #right-section #search-box #search-icon {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 22px;
-      color: #939291; }
+      color: #9e9d9c; }
 
 #home-link {
   display: block;
@@ -98,11 +98,11 @@
 #content-container {
   width: 90%;
   max-width: 700px;
-  background-color: #fffbf5;
-  margin: 50px auto;
-  height: 500px; }
-  #content-container #content-division {
+  margin: 50px auto; }
+  #content-container .content-section {
     width: 100%;
+    background-color: #fffbf5; }
+  #content-container #content-division {
     align-items: center;
     justify-content: center; }
     #content-container #content-division > div {
@@ -118,13 +118,67 @@
       border-bottom: 4px solid #fffbf5; }
       #content-container #content-division > div .division-name {
         font-weight: 300;
-        color: #e5e5e5;
+        color: #d6d6d6;
         font-size: 0.9em; }
       #content-container #content-division > div .division-count {
         font-weight: 500;
         color: #605e58; }
       #content-container #content-division > div.active, #content-container #content-division > div:hover {
         border-color: #80a8cc; }
+  #content-container #articles-container {
+    margin-top: 50px;
+    flex-flow: column; }
+    #content-container #articles-container .tweet {
+      padding: 30px;
+      align-items: stretch; }
+      #content-container #articles-container .tweet > section {
+        display: flex; }
+      #content-container #articles-container .tweet .user-dp-column {
+        flex: 0 1 75px;
+        justify-content: flex-end;
+        padding: 0 15px 0 0; }
+      #content-container #articles-container .tweet .content-column {
+        flex: 1 1;
+        flex-flow: column; }
+
+.user-dp {
+  background: url("../images/profile-dp.jpg");
+  background-size: contain; }
+
+.content-column {
+  font-family: Roboto, sans-serif;
+  font-size: 0.9em;
+  padding-left: 6px; }
+  .content-column .user-info .tweet-time {
+    flex: 1 1;
+    text-align: right;
+    color: #d6d6d6;
+    font-weight: 300; }
+  .content-column .user-info .user-name {
+    flex: 3 1;
+    color: #605e58;
+    font-weight: 500; }
+    .content-column .user-info .user-name .user-handle {
+      color: #d6d6d6;
+      font-weight: 300;
+      padding-left: 5px; }
+  .content-column .tweet-content {
+    color: #9e9d9c;
+    margin-top: 10px; }
+  .content-column .tweet-controls {
+    margin-top: 15px; }
+    .content-column .tweet-controls i {
+      cursor: pointer;
+      color: #d6d6d6; }
+      .content-column .tweet-controls i:hover {
+        color: #9e9d9c; }
+    .content-column .tweet-controls .right-expander-icon {
+      flex: 1 1;
+      text-align: right; }
+    .content-column .tweet-controls .left-control-stack {
+      flex: 5 1; }
+      .content-column .tweet-controls .left-control-stack i {
+        margin-right: 10px; }
 
 * {
   box-sizing: border-box;
@@ -134,29 +188,29 @@
 body {
   background-color: #f2eee8; }
 
-.flex-container, #app-header, #app-header #left-section, #app-header #right-section, #app-header #left-section > div, #app-header #right-section > div, #left-section #left-icon-list, #content-container #content-division, #content-container #content-division > div {
+.flex-container, #app-header, #app-header #left-section, #app-header #right-section, #app-header #left-section > div, #app-header #right-section > div, #left-section #left-icon-list, #content-container .content-section, #content-container #content-division > div, #content-container #articles-container .tweet, .content-column > div, .content-column .tweet-controls .left-control-stack {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
 
-.circular-icons, #left-section #extreme-left-section #extreme-left-link, #right-section #search-box #search-query {
+.circular-icons, #left-section #extreme-left-section #extreme-left-link, #right-section #search-box #search-query, .user-dp {
   width: 60px;
   height: 60px;
   border-radius: 60px;
   display: block;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #d6d6d6;
   position: relative; }
-  .circular-icons .fa, #left-section #extreme-left-section #extreme-left-link .fa, #right-section #search-box #search-query .fa {
+  .circular-icons .fa, #left-section #extreme-left-section #extreme-left-link .fa, #right-section #search-box #search-query .fa, .user-dp .fa {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
 
-.apply-shadow, #app-header, #content-container #content-division {
+.apply-shadow, #app-header, #content-container .content-section {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
 
-.smooth-animation, #left-section #extreme-left-section #extreme-left-link, #left-section #left-icon-list .left-icon-item, #right-section #search-box #search-query, #content-container #content-division > div {
+.smooth-animation, #left-section #extreme-left-section #extreme-left-link, #left-section #left-icon-list .left-icon-item, #right-section #search-box #search-query, #content-container #content-division > div, .content-column .tweet-controls i {
   transition: all 0.3s; }
 
 #app-container {
