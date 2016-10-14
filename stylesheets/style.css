@@ -251,6 +251,7 @@ body {
     flex-basis: 100%; }
     #app-header #right-section #search-query {
       width: 100%;
-      background-color: #fffcf8; } }
+      background-color: #fffcf8;
+      color: #9e9d9c; } }
 
 /*# sourceMappingURL=style.css.map */
