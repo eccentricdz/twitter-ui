@@ -68,10 +68,11 @@
       padding: 0 20px;
       font-family: Roboto, sans-serif;
       font-weight: 300;
-      color: #9e9d9c;
+      color: transparent;
       font-size: 1em;
       background-color: #fffbf5; }
       #right-section #search-box #search-query:focus {
+        color: #9e9d9c;
         outline: none;
         border-color: #9e9d9c;
         width: 100%;

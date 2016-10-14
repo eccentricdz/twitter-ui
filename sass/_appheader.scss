@@ -108,12 +108,13 @@
             padding: 0 20px;
             font-family: $font;
             font-weight: $light;
-            color: $primary-color;
+            color: transparent;
             font-size: 1em;
             @extend .smooth-animation;
             background-color: $card-bg-color;
 
             &:focus {
+                color: $primary-color;
                 outline: none;
                 border-color: $primary-color;
                 width: 100%;
